@@ -1,0 +1,1387 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BharatRakshak by Shaurya ???? - Supreme AI Security</title>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* === CSS Styling (ZENITH Aesthetic Cyber PRO - FINAL VERSION) === */
+        body {
+            font-family: 'Darker Grotesque', sans-serif; /* ZENITH aesthetic font */
+            margin: 0;
+            background-color: #000000; /* Pure black background */
+            color: #F0F4F8; /* Ultra-refined text color */
+            overflow-x: hidden;
+            line-height: 1.8; /* Improved body line height for zen readability */
+            -webkit-font-smoothing: antialiased; /* Enhance font rendering */
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 100px; /* ZENITH header padding */
+            border-bottom: 2px solid #0A0A0A; /* Thicker, darkest header border */
+            background-color: rgba(0,0,0,0.03); /* Subtlest header background overlay */
+        }
+
+        .logo {
+            display: flex;
+            align-items: center; /* Vertically align logo and flag */
+        }
+
+        .logo h1 {
+            font-size: 3.4em; /* ZENITH logo size */
+            color: #90F8FF; /* Most luminous cyan logo */
+            text-shadow: 0 0 50px #90F8FF; /* ZENITH neon glow */
+            letter-spacing: 3.5px; /* ZENITH logo letter spacing */
+            font-weight: 900; /* ULTIMATE bold font weight */
+            text-transform: uppercase;
+            opacity: 0.98; /* Near-opaque logo for maximum impact */
+            margin-right: 15px; /* Spacing between logo text and flag */
+        }
+
+        /* === Indian Flag Animation Styles (ZENITH 3D Wave - Realistic Flutter) === */
+        .india-flag {
+            width: 60px; /* Flag size */
+            height: 40px;
+            border-radius: 3px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 500px; /* Perspective for 3D depth */
+            animation: realisticWave 8s cubic-bezier(.36,.45,.63,.53) infinite; /* Realistic wave animation timing */
+        }
+
+        .flag-stripes {
+            position: absolute;
+            width: 100%;
+            height: 33.33%;
+            background-color: #FF9933; /* Saffron */
+            top: 0;
+            transform-origin: 50% 0%; /* Transformation origin for wave effect */
+        }
+
+        .flag-stripes.white { background-color: #FFFFFF; top: 33.33%; } /* White */
+        .flag-stripes.green { background-color: #128807; top: 66.66%; } /* Green */
+
+        .chakra {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: #FFFFFF;
+            box-shadow: 0 0 6px rgba(0,0,0,0.3);
+        }
+
+        .chakra-lines {
+            position: absolute;
+            width: 75%;
+            height: 75%;
+            border: 2px solid #000080; /* Navy Blue Chakra */
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: rotateChakra 2s linear infinite; /* Chakra rotation animation */
+        }
+
+        @keyframes realisticWave {
+            0%, 100% {
+                transform: rotate3d(1, 0, 0, 0deg); /* Initial flat position */
+                animation-timing-function: ease-out;
+            }
+            25% {
+                transform: rotate3d(1, 0, 0, 20deg); /* Realistic forward wave */
+                animation-timing-function: ease-in-out;
+            }
+            50% {
+                transform: rotate3d(1, 0, 0, 0deg); /* Back to flat - slight flutter */
+                animation-timing-function: ease-out;
+            }
+            75% {
+                transform: rotate3d(1, 0, 0, -15deg); /* Realistic backward wave/flutter */
+                animation-timing-function: ease-in-out;
+            }
+        }
+
+
+        @keyframes rotateChakra {
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* === Google Verified Badge (Top Right) === */
+        .google-verified {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            display: flex;
+            align-items: center;
+            background-color: #4285F4; /* Google Blue */
+            color: #FFFFFF;
+            padding: 12px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            transition: transform 0.05s ease;
+        }
+
+        .google-verified:hover {
+            transform: scale(1.03);
+        }
+
+        .google-verified i {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+
+        nav {}
+
+        main {
+            padding: 50px 100px; /* ZENITH main padding */
+        }
+
+        #hero {
+            text-align: center;
+            padding: 240px 0; /* ZENITH hero padding */
+        }
+
+        #hero h1 {
+            font-size: 5.4em; /* Colossal hero heading - ZENITH size */
+            margin-bottom: 55px;
+            color: #FFFFFF; /* Purest white hero heading */
+            text-shadow: 0 0 50px #90F8FF; /* Most intense ZENITH cyan text shadow */
+            letter-spacing: 4.5px; /* ZENITH hero heading letter spacing */
+            font-weight: 900; /* ULTIMATE bold font weight */
+            opacity: 0.98;
+        }
+
+        #hero p {
+            font-size: 1.9em; /* ZENITH hero paragraph size */
+            color: #D5DAE0; /* Softest gray text - ZENITH refinement */
+            line-height: 2.7; /* ZENITH hero line height */
+            max-width: 1050px; /* Widest hero text max width - ZENITH */
+            margin: 0 auto 55px auto;
+            opacity: 0.9; /* Slightly less opaque paragraph for ZEN depth */
+        }
+
+        .hero-actions button {
+            padding: 30px 65px; /* HYPER size hero buttons - ZENITH */
+            margin: 24px;
+            font-size: 1.8em; /* ULTIMATE button text size - ZENITH */
+            border: 3px solid #90F8FF; /* Thickest ZENITH cyan button border */
+            border-radius: 3px; /* SHARPEST button corners - ZENITH */
+            cursor: pointer;
+            transition: transform 0.07s ease-in-out, box-shadow 0.07s ease-in-out, border-color 0.10s ease, background-color 0.10s ease, color 0.10s ease; /* HYPER-FAST button transitions - ZENITH */
+            letter-spacing: 2px; /* MAX button letter spacing - ZENITH */
+            font-weight: 900; /* ULTIMATE bold font weight - ZENITH */
+            text-transform: uppercase;
+            background-color: rgba(0, 0, 0, 0.05); /* Very subtle dark button background - ZENITH */
+            color: #90F8FF; /* Most luminous cyan button text - ZENITH */
+            box-shadow: 0 0 50px rgba(144, 248, 255, 0.8), 0 5px 7px rgba(0, 0, 0, 0.7); /* MOST EXTREME button shadow - ZENITH */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-actions button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(144, 248, 255, 0.02); /* Barely visible blue overlay - ZENITH */
+            opacity: 0;
+            transition: opacity 0.10s ease-in-out;
+        }
+
+        .hero-actions button:hover::before {
+            opacity: 1;
+        }
+
+
+        .emergency-button {
+            border-color: #FF7A64; /* Brightest emergency coral button border - ZENITH */
+            color: #FF7A64; /* Brightest emergency coral button text - ZENITH */
+            box-shadow: 0 0 50px rgba(255, 122, 100, 0.9), 0 5px 7px rgba(0, 0, 0, 0.7); /* MOST EXTREME red button shadow - ZENITH */
+        }
+        .emergency-button:hover {
+            border-color: #FFFFFF;
+            color: #FFFFFF;
+            background-color: #FF7A64; /* Subtle emergency button hover background */
+        }
+
+
+        .hero-actions button:hover {
+            transform: scale(1.015); /* Subtlest hover scale - ZENITH */
+            box-shadow: 0 0 55px rgba(144, 248, 255, 1.0), 0 7px 14px rgba(0, 0, 0, 0.8); /* MOST EXTREME hover shadow - ZENITH */
+            border-color: #FFFFFF;
+            color: #FFFFFF;
+            background-color: rgba(144, 248, 255, 0.005); /* Barely perceptible blue hover background - ZENITH */
+
+        }
+
+        #quick-services {
+            margin-top: 180px; /* MAX quick services margin - ZENITH */
+            text-align: center;
+        }
+
+        #quick-services h2 {
+            font-size: 3.8em; /* MAX quick services heading - ZENITH */
+            color: #FFFFFF;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+            letter-spacing: 3px; /* MAX heading letter spacing - ZENITH */
+            font-weight: 900; /* ULTIMATE bold font weight - ZENITH */
+            text-shadow: 0 0 28px #FFFFFF; /* Subtlest white heading shadow - ZENITH */
+            opacity: 0.98;
+        }
+
+
+        .services-grid {
+            display: flex;
+            justify-content: center;
+            gap: 55px; /* MAX service button gap - ZENITH */
+            margin-top: 60px;
+        }
+
+        .service-button {
+            padding: 28px 55px; /* HYPER size service buttons - ZENITH */
+            font-size: 1.7em; /* MAX service button text - ZENITH */
+            border: 3px solid #90F8FF; /* Thickest ZENITH cyan service button border */
+            border-radius: 3px; /* SHARPEST service button corners - ZENITH */
+            cursor: pointer;
+            color: #90F8FF; /* Most luminous cyan service button text - ZENITH */
+            transition: background-color 0.07s ease, transform 0.05s ease, box-shadow 0.05s ease, color 0.07s ease, border-color 0.07s ease; /* FASTEST service button transitions - ZENITH */
+            box-shadow: 0 0 30px rgba(144, 248, 255, 0.8), 0 4px 5px rgba(0, 0, 0, 0.6); /* MOST EXTREME service button shadow - ZENITH */
+            font-weight: 900; /* ULTIMATE bold font weight - ZENITH */
+            text-transform: uppercase;
+            letter-spacing: 1.8px; /* MAX service button letter spacing - ZENITH */
+            background-color: rgba(0, 0, 0, 0.05);
+            opacity: 0.95; /* Slightly less opaque buttons for ZEN depth */
+        }
+
+
+        .service-button.fire { color: #FFAD94; border-color: #FFAD94; text-shadow: 0 0 14px #FFAD94; } /* Fire button color - ZENITH */
+        .service-button.medical { color: #B2FFEE; border-color: #B2FFEE; text-shadow: 0 0 14px #B2FFEE; } /* Medical button color - even brighter cyan/teal - ZENITH */
+        .service-button.police { color: #DDBBFF; border-color: #DDBBFF; text-shadow: 0 0 14px #DDBBFF; } /* Police button color - ZENITH */
+
+
+        .service-button:hover {
+            background-color: rgba(144, 248, 255, 0.02); /* Very subtle blue hover background - ZENITH */
+            transform: scale(1.01); /* Subtlest hover scale - ZENITH */
+            box-shadow: 0 0 35px rgba(144, 248, 255, 1.0), 0 5px 7px rgba(0, 0, 0, 0.7); /* MOST EXTREME hover shadow - ZENITH */
+            color: #FFFFFF;
+            border-color: #FFFFFF;
+            background-color: #90F8FF; /* Subtle service button hover background */
+        }
+
+        #ai-features {
+            margin-top: 280px; /* MAX AI features margin - ZENITH */
+        }
+
+        #ai-features h2 {
+            font-size: 4.0em; /* MAX AI features heading - ZENITH */
+            color: #FFFFFF;
+            margin-bottom: 65px;
+            text-transform: uppercase;
+            letter-spacing: 3.2px; /* MAX heading letter spacing - ZENITH */
+            font-weight: 900; /* ULTIMATE bold font weight - ZENITH */
+            text-shadow: 0 0 30px #FFFFFF; /* Subtlest white heading shadow - ZENITH */
+            opacity: 0.98;
+        }
+
+
+        .features-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(520px, 1fr)); /* WIDEST feature boxes - ZENITH */
+            gap: 75px; /* MAX feature box gap - ZENITH */
+            margin-top: 70px;
+        }
+
+        .feature {
+            background-color: #020202; /* Deepest feature box background - near pure black - ZENITH */
+            padding: 65px; /* MAX feature box padding - ZENITH */
+            border-radius: 6px; /* SHARPEST feature box corners - ZENITH */
+            box-shadow: 14px 14px 28px #000000, -14px -14px 28px #050505, 0 0 16px rgba(144, 248, 255, 0.08) inset; /* MOST EXTREME feature box shadow - ZENITH */
+            border-top: 1px solid #121212; /* Darkest top border - ZENITH */
+            border-left: 1px solid #121212; /* Darkest left border - ZENITH */
+            transition: transform 0.07s ease-in-out, box-shadow 0.07s ease-in-out; /* FASTEST feature box transition - ZENITH */
+            opacity: 0.92; /* Slightly less opaque feature boxes for ZEN depth */
+        }
+
+
+        .feature:hover {
+            transform: translateY(-16px); /* MOST pronounced hover lift - ZENITH */
+            box-shadow: 0 22px 40px rgba(0,0,0,0.9), 0 0 40px #90F8FF, 0 0 18px rgba(255,255,255,0.03) inset; /* MOST EXTREME hover shadow - ZENITH */
+        }
+
+        .feature h3 {
+            color: #FFFFFF;
+            margin-bottom: 45px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            font-size: 2.0em; /* MAX feature titles - ZENITH */
+            text-shadow: 0 0 30px #90F8FF; /* Strongest glow on feature titles - ZENITH */
+            font-weight: 900; /* ULTIMATE bold font weight - ZENITH */
+            text-transform: uppercase;
+            letter-spacing: 2.2px; /* MAX feature title letter spacing - ZENITH */
+            opacity: 0.98;
+        }
+
+        .feature p {
+            color: #D5DAE0; /* Softest gray feature description text - ZENITH */
+            font-size: 1.35em; /* Slightly larger feature description - ZENITH */
+            line-height: 2.8; /* MAX line height - ZENITH */
+            letter-spacing: 1.4px; /* MAX feature description letter spacing - ZENITH */
+            font-weight: 300;
+            opacity: 0.85; /* Slightly less opaque paragraph for ZEN depth */
+        }
+
+        .ai-icon, .location-icon, .security-icon, .predictive-icon, .brainwave-icon, .drone-icon, .translation-icon, .crime-icon {
+            font-size: 3.2em; /* MAX icon size - ZENITH */
+            color: #90F8FF; /* Most luminous cyan icons - ZENITH */
+            text-shadow: 0 0 35px #90F8FF; /* Strongest icon glow - ZENITH */
+            margin-right: -16px; /* Adjust icon spacing - ZENITH */
+            opacity: 0.98;
+        }
+
+        #ai-chat-area {
+            background-color: #010101; /* Deepest chat area background - pure black - ZENITH */
+            border-radius: 5px; /* SHARPEST chat area corners - ZENITH */
+            padding: 45px; /* MAX chat area padding - ZENITH */
+            margin-top: 40px;
+            height: 340px; /* Slightly taller chat area - ZENITH */
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #1E1E1E; /* Darkest chat area border - ZENITH */
+            box-shadow: 0 0 30px rgba(0,0,0,0.8) inset; /* MOST EXTREME inset shadow for chat area - ZENITH */
+            opacity: 0.92; /* Slightly less opaque chat area for ZEN depth */
+            position: relative; /* For AI Robot icon placement */
+        }
+
+        /* === AI Robot Icon - Subtle Animation === */
+        #ai-robot-icon {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 2.4em;
+            color: #90F8FF;
+            text-shadow: 0 0 20px #90F8FF;
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            transform: scale(0.8); /* Slightly smaller initially */
+            animation: pulseRobot 2s infinite alternate;
+        }
+
+        #ai-robot-icon.active {
+            opacity: 0.85; /* Visible when active */
+            transform: scale(1);
+        }
+
+        @keyframes pulseRobot {
+            0% { transform: scale(0.9); opacity: 0.75; }
+            100% { transform: scale(1); opacity: 0.85; }
+        }
+
+
+        .chat-log {
+            flex-grow: 1;
+            overflow-y: auto;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+        }
+
+        .chat-message {
+            padding: 22px 35px; /* MAX chat message padding - ZENITH */
+            border-radius: 14px; /* Slightly more rounded chat bubbles - ZENITH */
+            margin-bottom: 20px;
+            word-wrap: break-word;
+            font-size: 1.25em; /* Larger chat text - ZENITH */
+            box-shadow: 0 1px 2px rgba(0,0,0,0.9); /* Subtlest shadow for chat bubbles - ZENITH */
+        }
+
+        .chat-message.user-message {
+            background-color: #90F8FF; /* Most luminous cyan user message - ZENITH */
+            color: #000000; /* Pure black text for user message - ZENITH */
+            align-self: flex-end;
+            text-shadow: none;
+            font-weight: 600; /* Bolder user message text - ZENITH */
+        }
+
+        .chat-message.ai-message {
+            background-color: #1E1E1E; /* Darkest AI message bubble - ZENITH */
+            color: #F8FAFC;
+            align-self: flex-start;
+            text-shadow: none;
+            font-weight: 400;
+        }
+
+        .chat-input {
+            display: flex;
+            gap: 30px; /* MAX chat input gap - ZENITH */
+        }
+
+        .chat-input input[type="text"] {
+            flex-grow: 1;
+            padding: 24px; /* MAX chat input - ZENITH */
+            border: 1px solid #7A8EA8; /* Darkest input border - ZENITH */
+            border-radius: 3px; /* SHARPEST input corners - ZENITH */
+            background-color: #0E0E0E; /* Deepest input background - near pure black - ZENITH */
+            color: #FFFFFF;
+            font-size: 1.2em; /* MAX input text size - ZENITH */
+            box-shadow: 0 0 12px rgba(0,0,0,0.7) inset; /* MOST EXTREME inset shadow for input - ZENITH */
+            opacity: 0.92; /* Slightly less opaque input for ZEN depth */
+        }
+
+        .chat-input button {
+            padding: 24px 40px; /* HYPER size chat input buttons - ZENITH */
+            border: none;
+            border-radius: 3px; /* SHARPEST input button corners - ZENITH */
+            background-color: #7A8EA8; /* Darkest input button background - ZENITH */
+            color: #FFFFFF;
+            cursor: pointer;
+            transition: background-color 0.05s ease, transform 0.03s ease; /* FASTEST button transitions - ZENITH */
+            font-size: 1.2em; /* MAX button text size - ZENITH */
+            font-weight: 900; /* ULTIMATE bold font weight - ZENITH */
+            text-transform: uppercase;
+            letter-spacing: 1.6px; /* MAX button letter spacing - ZENITH */
+            box-shadow: 0 0 16px rgba(0,0,0,0.8); /* MOST EXTREME shadow for input buttons - ZENITH */
+            opacity: 0.92; /* Slightly less opaque input buttons for ZEN depth */
+        }
+
+        .chat-input button:hover {
+            background-color: #8FA4C8; /* Slightly lighter button hover color - ZENITH */
+            transform: scale(1.01);
+            box-shadow: 0 0 22px rgba(0,0,0,1.0); /* MOST EXTREME hover shadow for input buttons - ZENITH */
+        }
+
+
+        #map-area {
+            background-color: #010101; /* Deepest map area background - pure black - ZENITH */
+            border-radius: 5px; /* SHARPEST map area corners - ZENITH */
+            height: 400px; /* MAX taller map area - ZENITH */
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #C5CDD3; /* Darkest placeholder text - ZENITH */
+            font-style: italic;
+            border: 1px solid #1E1E1E; /* Darkest map border - ZENITH */
+            box-shadow: 0 0 30px rgba(0,0,0,0.8) inset; /* MOST EXTREME inset shadow for map area - ZENITH */
+            opacity: 0.92; /* Slightly less opaque map area for ZEN depth */
+        }
+
+        #emergency-contacts {
+            margin-top: 300px; /* MAX emergency contacts margin - ZENITH */
+            text-align: left;
+        }
+
+        #emergency-contacts h2 {
+            font-size: 4.0em; /* MAX emergency contacts heading - ZENITH */
+            color: #FFFFFF;
+            margin-bottom: 55px;
+            text-transform: uppercase;
+            letter-spacing: 3.2px; /* MAX heading letter spacing - ZENITH */
+            font-weight: 900; /* ULTIMATE bold font weight - ZENITH */
+            text-shadow: 0 0 30px #FFFFFF; /* Subtlest white heading shadow - ZENITH */
+            text-align: center;
+            opacity: 0.98;
+        }
+
+
+        .contacts-list {
+            margin-top: 55px;
+            display: block; /* Full width contact list - ZENITH */
+            padding: 55px 90px; /* MAX contact box padding - ZENITH */
+            background: linear-gradient(145deg, #1a1a1a, #080808); /* Dark futuristic gradient background */
+            color: #FFFFFF;
+            border-radius: 8px; /* More rounded contact box corners */
+            box-shadow:  12px 12px 24px #000000, -12px -12px 24px #2b2b2b; /* Enhanced shadow for depth */
+            border: 1px solid #1E1E1E; /* Darker border */
+            text-align: left;
+            margin-bottom: 35px; /* Added margin between contact boxes - ZENITH */
+            position: relative; /* For 3D effect - ZENITH */
+            overflow: hidden; /* Clip gradient overflow for rounded corners */
+            opacity: 0.95; /* Slightly less opaque contact boxes for ZEN depth */
+        }
+
+        .contacts-list::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.03); /* Subtle inner highlight overlay */
+            pointer-events: none; /* Prevent interference with clicks */
+            border-radius: 7px; /* Match inner corner rounding */
+        }
+
+        .contacts-list::after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            right: 3px;
+            bottom: 3px;
+            border: 1px solid rgba(0, 0, 0, 0.4); /* Deeper inner border shadow */
+            border-radius: 5px; /* Match inner shadow rounding */
+            pointer-events: none;
+        }
+
+
+        .contacts-list h3 {
+            font-size: 1.8em; /* MAX contact box heading size - ZENITH */
+            margin-bottom: 26px;
+            letter-spacing: 1.8px; /* MAX contact box heading letter spacing - ZENITH */
+            font-weight: 900; /* ULTIMATE bold font weight - ZENITH */
+            text-transform: uppercase;
+            opacity: 0.98;
+            text-shadow: 0 0 8px #FFFFFF; /* Subtle white text shadow for heading */
+        }
+
+        .contacts-list p {
+            margin: 24px 0;
+            font-size: 1.35em; /* Slightly larger contact text - ZENITH */
+            letter-spacing: 1.3px;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            gap: 16px; /* MAX spacing between icon and text - ZENITH */
+            opacity: 0.9;
+            text-shadow: 0 0 4px #FFFFFF; /* Subtle white text shadow for paragraph */
+        }
+
+        .contact-icon {
+            font-size: 1.6em; /* MAX icon size - ZENITH */
+            color: #90F8FF;
+            opacity: 0.92; /* Slightly less faded icon - ZENITH */
+            text-shadow: 0 0 7px #90F8FF; /* Subtle icon glow - ZENITH */
+        }
+
+
+        .contacts-list button {
+            background-color: #FFFFFF;
+            color: #2E6DFF; /* Futuristic CYAN call button text - BLUE now! - ZENITH */
+            border: none;
+            padding: 20px 35px; /* MAX call button padding - ZENITH */
+            border-radius: 5px; /* Slightly more rounded call button corners */
+            cursor: pointer;
+            font-weight: 900; /* ULTIMATE bold font weight - ZENITH */
+            transition: background-color 0.05s ease, color 0.05s ease, transform 0.03s ease, box-shadow 0.03s ease; /* FASTEST call button transitions - ZENITH */
+            box-shadow: 0 0 20px rgba(0,0,0,0.8), 0 4px 5px rgba(0, 0, 0, 0.6); /* MOST EXTREME call button shadow - ZENITH */
+            text-transform: uppercase;
+            letter-spacing: 1.6px; /* MAX call button letter spacing - ZENITH */
+            opacity: 0.92; /* Slightly less opaque call buttons for ZEN depth */
+        }
+
+        .contacts-list button:hover {
+            background-color: #2E6DFF;
+            color: #FFFFFF;
+            transform: scale(1.01);
+            box-shadow: 0 0 35px rgba(46, 109, 255, 1.4), 0 5px 7px rgba(0, 0, 0, 0.9); /* MOST EXTREME hover shadow - ZENITH */
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 90px 0; /* MAX footer padding - ZENITH */
+            margin-top: 300px; /* MAX footer margin - ZENITH */
+            border-top: 2px solid #0A0A0A; /* Thicker, darkest footer border - ZENITH */
+            color: #C5CDD3; /* Darkest footer text - ZENITH */
+            font-size: 1.05em;
+            letter-spacing: 0.8px;
+            font-weight: 300;
+            opacity: 0.8; /* Slightly less opaque footer for ZEN depth */
+        }
+
+        footer a {
+            color: #C5CDD3;
+            text-decoration: none;
+            transition: color 0.06s ease; /* Fastest footer link transition - ZENITH */
+        }
+
+        footer a:hover {
+            color: #D9E0E7; /* Lighter footer link hover color - ZENITH */
+            text-decoration: underline;
+        }
+
+
+        /* === "BHARATRAKSHAK NETWORK" Static Text Box (ZENITH PRO) === */
+        #mission-safe-india {
+            position: fixed;
+            top: 40px;
+            left: 40px;
+            background-color: rgba(0, 0, 0, 0.9); /* Darkest box background - ZENITH */
+            color: #F8FAFC;
+            padding: 24px 40px; /* MAX static box padding - ZENITH */
+            border-radius: 3px; /* SHARPEST box corners - ZENITH */
+            z-index: 1000;
+            box-shadow: 0 0 50px rgba(255, 122, 100, 1.0), 0 5px 7px rgba(0, 0, 0, 0.8); /* MOST EXTREME red shadow for static box - ZENITH */
+            font-size: 1.5em; /* MAX static box text size - ZENITH */
+            font-weight: 900; /* ULTIMATE bold font weight - ZENITH */
+            text-transform: uppercase;
+            letter-spacing: 1.6px; /* MAX static box letter spacing - ZENITH */
+            border: 2px solid #FF9D8B; /* Slightly darker static box border - ZENITH */
+            opacity: 0.98;
+        }
+
+
+        /* === Popup Styles (Subscription & Signup) - HYPER PRO - ZENITH === */
+        .popup {
+            display: none;
+            position: fixed;
+            z-index: 2;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.98); /* Darkest popup background - ZENITH */
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            backdrop-filter: blur(10px); /* MAX background blur - ZENITH */
+        }
+
+        .popup-content {
+            background-color: #000000; /* Deepest popup content background - pure black - ZENITH */
+            margin: 4% auto; /* Adjusted popup margin - ZENITH */
+            padding: 60px; /* MAX popup padding - ZENITH */
+            border: 2px solid #8A9EBB; /* Darker popup border - ZENITH */
+            border-radius: 5px; /* SHARPEST popup corners - ZENITH */
+            width: 98%; /* Slightly wider popup width - ZENITH */
+            max-width: 950px; /* Maximum max width - ZENITH */
+            position: relative;
+            box-shadow: 0 0 50px rgba(0,0,0,1.0), 0 5px 7px rgba(0, 0, 0, 0.9); /* MOST EXTREME popup shadow - ZENITH */
+            opacity: 0.98; /* Near-opaque popup for ZEN depth */
+        }
+
+        .close-button {
+            color: #BFC7CF; /* Darkest close button color - ZENITH */
+            position: absolute;
+            top: 26px;
+            right: 36px;
+            font-size: 22px; /* Slightly smaller close button - ZENITH */
+            font-weight: 300; /* Least bold close button - ZENITH */
+            cursor: pointer;
+            opacity: 0.3; /* Most transparent close button - ZENITH */
+            transition: color 0.05s ease, opacity 0.05s ease; /* FASTEST close button transition - ZENITH */
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: #FFFFFF;
+            text-decoration: none;
+            cursor: pointer;
+            opacity: 1;
+        }
+
+        .popup h2 {
+            color: #FFFFFF;
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 3.2em; /* MAX size popup heading - ZENITH */
+            text-transform: uppercase;
+            letter-spacing: 3.2px; /* MAX popup heading letter spacing - ZENITH */
+            font-weight: 900; /* ULTIMATE bold font weight - ZENITH */
+            text-shadow: 0 0 25px #FFFFFF; /* Subtlest white heading shadow - ZENITH */
+            opacity: 0.98;
+        }
+
+        .pricing-plans {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 55px;
+            flex-wrap: wrap;
+            gap: 55px; /* MAX pricing plan gap - ZENITH */
+        }
+
+        .plan {
+            background: linear-gradient(145deg, #1a1a1a, #080808); /* Dark futuristic gradient */
+            color: #FFFFFF; /* Purest white plan text - ZENITH */
+            padding: 45px; /* MAX plan box padding - ZENITH */
+            border-radius: 8px; /* More rounded plan boxes corners */
+            text-align: center;
+            width: 320px; /* WIDEST plan boxes - ZENITH */
+            box-sizing: border-box;
+            box-shadow: 12px 12px 24px #000000, -12px -12px 24px #2b2b2b; /* Enhanced shadow */
+            transition: transform 0.07s ease-in-out, box-shadow 0.07s ease-in-out; /* FASTEST plan box transition - ZENITH */
+            position: relative; /* For inner highlight overlay */
+            overflow: hidden; /* Clip gradient overflow for rounded corners */
+            opacity: 0.95; /* Slightly less opaque plan boxes for ZEN depth */
+        }
+
+        .plan::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.03); /* Subtle inner highlight overlay */
+            pointer-events: none; /* Prevent interference with clicks */
+            border-radius: 7px; /* Match inner corner rounding */
+        }
+
+
+        .plan:hover {
+            transform: scale(1.008); /* Subtlest hover scale - ZENITH */
+            box-shadow: 0 0 30px rgba(144, 248, 255, 1.0), 0 5px 7px rgba(0, 0, 0, 0.7); /* MOST EXTREME hover shadow for plans - ZENITH */
+        }
+
+
+        .plan.premium {
+            background: linear-gradient(145deg, #c47354, #f9a884); /* Orange premium gradient */
+            box-shadow: 12px 12px 24px #92543e, -12px -12px 24px #ffc0a0; /* Enhanced shadow for premium */
+        }
+
+        .plan.lifetime {
+            background: linear-gradient(145deg, #3da840, #5dcf60); /* Green lifetime gradient */
+            box-shadow: 12px 12px 24px #2b732e, -12px -12px 24px #77f57b; /* Enhanced shadow for lifetime */
+        }
+
+
+        .plan h3 {
+            margin-top: 0;
+            font-size: 2.2em; /* MAX size plan headings - ZENITH */
+            text-transform: uppercase;
+            letter-spacing: 2px; /* MAX plan heading letter spacing - ZENITH */
+            font-weight: 900; /* ULTIMATE bold font weight - ZENITH */
+            text-shadow: 0 0 7px #FFFFFF; /* Subtlest white heading shadow - ZENITH */
+            opacity: 0.98;
+        }
+
+        .plan p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            font-weight: 300;
+            opacity: 0.85; /* Slightly less opaque plan paragraphs for ZEN depth */
+        }
+
+        .plan ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 45px;
+        }
+
+        .plan li {
+            padding: 12px 0;
+            border-bottom: 1px dashed #8A9EBB; /* Darker dashed border - ZENITH */
+            font-size: 1.1em;
+            font-weight: 300;
+            opacity: 0.8; /* Slightly less opaque plan list items for ZEN depth */
+        }
+
+        .plan li:last-child {
+            border-bottom: none;
+        }
+
+        .plan button.action-button {
+            width: 100%;
+            padding: 20px;
+            font-size: 1.2em;
+            font-weight: 900; /* ULTIMATE bold font weight - ZENITH */
+        }
+
+        .free-access {
+            text-align: center;
+            margin-top: 55px;
+        }
+
+        .free-access input[type="password"] {
+            padding: 20px;
+            border-radius: 3px; /* SHARPEST free access input corners - ZENITH */
+            border: 1px solid #8A9EBB; /* Darker input border - ZENITH */
+            background-color: #181818; /* Deepest free access input background - near pure black - ZENITH */
+            color: #FFFFFF;
+            margin-right: 24px;
+            font-size: 1.1em;
+            box-shadow: 0 0 14px rgba(0,0,0,0.8) inset; /* MOST EXTREME inset shadow for free access input - ZENITH */
+            opacity: 0.92; /* Slightly less opaque free access input for ZEN depth */
+        }
+
+        .free-access button {
+            padding: 20px 30px;
+            border: none;
+            border-radius: 3px; /* SHARPEST free access button corners - ZENITH */
+            background-color: #8A9EBB; /* Darker free access button background - ZENITH */
+            color: #FFFFFF;
+            cursor: pointer;
+            transition: background-color 0.05s ease, transform 0.03s ease; /* FASTEST free access button transition - ZENITH */
+            font-size: 1.1em;
+            font-weight: 900; /* ULTIMATE bold font weight - ZENITH */
+            box-shadow: 0 0 16px rgba(0,0,0,0.9); /* MOST EXTREME shadow for free access button - ZENITH */
+            opacity: 0.92; /* Slightly less opaque free access buttons for ZEN depth */
+        }
+
+        .free-access button:hover {
+            background-color: #A4B8D8; /* Slightly lighter free access button hover color - ZENITH */
+            transform: scale(1.008);
+            box-shadow: 0 0 25px rgba(0,0,0,1.0); /* MOST EXTREME hover shadow for free access button - ZENITH */
+        }
+
+        #signup-popup input[type="email"],
+        #signup-popup input[type="password"] {
+            width: calc(100% - 50px); /* Adjusted signup input width - ZENITH */
+            padding: 22px;
+            margin: 24px 0;
+            border-radius: 5px; /* SHARPEST signup input corners - ZENITH */
+            border: 2px solid #8A9EBB; /* Darker input border - ZENITH */
+            background-color: #181818; /* Deepest signup input background - near pure black - ZENITH */
+            color: #FFFFFF;
+            font-size: 1.1em;
+            box-shadow: 0 0 12px rgba(0,0,0,0.7) inset; /* MOST EXTREME inset shadow for signup inputs - ZENITH */
+            opacity: 0.92; /* Slightly less opaque signup inputs for ZEN depth */
+        }
+
+        #signup-popup button.action-button {
+            width: 100%;
+            padding: 20px;
+            font-size: 1.2em;
+            margin-top: 32px;
+            font-weight: 900; /* ULTIMATE bold font weight - ZENITH */
+        }
+
+        #signup-message {
+            margin-top: 45px;
+            text-align: center;
+            display: none;
+            font-size: 1.1em;
+        }
+
+        #rating-area {
+            display: inline-block;
+            margin-top: 24px;
+            cursor: pointer;
+        }
+
+        .star {
+            font-size: 21px; /* Slightly smaller stars - ZENITH */
+            color: #C5CDD3; /* Darkest star color - ZENITH */
+            margin-right: 3px;
+            display: inline-block;
+            transition: color 0.05s ease, transform 0.03s ease; /* FASTEST star transition - ZENITH */
+            opacity: 0.85; /* Slightly less opaque stars for ZEN depth */
+        }
+
+        .star:hover, .star.active {
+            color: #FFD700;
+            transform: scale(1.01); /* Subtlest scale on star hover/active - ZENITH */
+        }
+
+        .star.active {
+            text-shadow: 0 0 5px #FFD700; /* Refined glow effect for active stars - ZENITH */
+        }
+
+
+        /* Balloon Animation Styles (Hidden - ZENITH PRO) */
+        #balloons {
+            display: none;
+        }
+
+
+    </style>
+</head>
+<body class="dark-theme">
+
+    <a href="https://images.bannerbear.com/direct/4mGpW3zwrxA1K0AxQw/requests/000/081/949/651/jMVrobL3AQ5konPJzG9ReqJW5/cdb82ccefac941c0d5fb2f6ab641e5a9610e3db6.pdf" target="_blank" class="google-verified">
+        <i class="fas fa-check-circle"></i> Google Verified
+    </a>
+
+    <div id="mission-safe-india">BHARATRAKSHAK NETWORK by Shaurya</div>
+
+    <header>
+        <div class="logo">
+            <h1>BharatRakshak by Shaurya</h1>
+            <div class="india-flag">
+                <div class="flag-stripes"></div>
+                <div class="flag-stripes white">
+                    <div class="chakra">
+                        <div class="chakra-lines"></div>
+                    </div>
+                </div>
+                <div class="flag-stripes green"></div>
+            </div>
+        </div>
+        <nav>
+            </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>India's Zenith of AI-Driven Security</h1>
+                <p>Experience Unbreakable Emergency Response Protocols. The Apex AI Network for Ultimate Security & National Defence.</p>
+                <div class="hero-actions">
+                    <button id="sos-button" class="emergency-button" onclick="triggerSOS()">Emergency SOS</button>
+                    <button id="fir-button" class="action-button" onclick="reportFIR()">File e-FIR</button>
+                    <button id="face-help-button" class="action-button" onclick="faceHelp()">Face Distress AI</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="quick-services">
+            <h2>Rapid Access Emergency Services</h2>
+            <div class="services-grid">
+                <button class="service-button fire" onclick="openFireServiceLink()"> <i class="ai-icon">??</i> Fire Brigade</button>
+                <button class="service-button medical" onclick="openMedicalLinks()"> <i class="ai-icon">??</i> Medical Aid</button>
+                <button class="service-button police" onclick="callPoliceLink()"> <i class="ai-icon">??</i> Police Force</button>
+            </div>
+        </section>
+
+        <section id="ai-features">
+            <h2>Network Core AI Capabilities</h2>
+            <div class="features-container">
+                <div class="feature">
+                    <h3><i class="ai-icon">??</i> Shaurya AI Command Assistant <i id="ai-robot-icon" class="fas fa-robot"></i></h3>
+                    <div id="ai-chat-area" class="chat-area">
+                        <div class="chat-log" id="chat-log">
+                            <div class="chat-message ai-message">Shaurya AI System Active. Secure Command Protocols Engaged. Awaiting Tactical Directives.</div>
+                        </div>
+                        <div class="chat-input">
+                            <input type="text" id="chat-message-input" placeholder="Input Secure Tactical Command...">
+                            <button id="send-chat-button" onclick="sendChatMessage()">Execute</button>
+                            <button id="voice-chat-button" onclick="startVoiceChat()">Voice Command</button>
+                        </div>
+                    </div>
+                    <p>Integrated 24/7 Zenith AI Command Interface. Encrypted tactical assistance, real-time situational analysis, and secure network command execution. (Simulated Secure Interface)</p>
+                    <button class="action-button" onclick="openSubscriptionPopup()">Access Zenith AI Network</button>
+                </div>
+
+                <div class="feature">
+                    <h3><i class="location-icon">??</i> Real-Time Location Intelligence Grid</h3>
+                    <div id="map-area" class="map-container">
+                         <div class="map-overlay-text">Loading Real-Time Location Map...</div>
+                    </div>
+                    <p>Encrypted Zenith-level location intelligence across the entire network. Instantaneous emergency response coordination & proximity-based alerts for all critical resources & dynamic threat zones. (Simulated Network Data Stream)</p>
+                </div>
+
+                <div class="feature">
+                    <h3><i class="security-icon">??</i> Multi-Factor Authentication & Security Matrix</h3>
+                    <p>Unbreakable Military-Grade Biometric Network Access Protocols, End-to-End Encryption Across All Channels, & Decentralized Blockchain Data Integrity for Absolute User & Network Security. (Simulated Security Matrix Protocols)</p>
+                </div>
+
+                <div class="feature">
+                    <h3><i class="predictive-icon">??</i> Predictive Threat & Disaster Algorithms</h3>
+                    <p>Advanced Zenith AI Algorithms & Network Analytics delivering Preemptive Intelligence on Emerging Threats, High-Risk Geozones, & Disaster Probability Vectors. Proactive Network Security Dominance. (Simulated Threat Prediction System)</p>
+                </div>
+
+                <div class="feature placeholder-feature">
+                    <h3><i class="brainwave-icon">??</i> Neural-Link SOS Interface (Conceptual Zenith)</h3>
+                    <p>Zenith Conceptual Next-Gen Interface: Seamless, Hands-Free Emergency Alerts Autonomously Triggered by Neural Distress Signature Detection within the Network Grid. Intuitive Safety Supremacy. (Future Network Tech Zenith Concept)</p>
+                </div>
+
+                <div class="feature placeholder-feature">
+                    <h3><i class="drone-icon">??</i> Autonomous AI Drone Emergency Response</h3>
+                    <p>Zenith Future Network Concept: Hypersonic AI-Driven Autonomous Drone Deployment to Network Emergency Coordinates. Real-Time First-Aid, Remote Tactical Intervention & Network Security Augmentation Capabilities. (Conceptual Future Network Zenith Capability)</p>
+                </div>
+
+                <div class="feature placeholder-feature">
+                    <h3><i class="translation-icon">??</i> Global Language Translation Protocol Engine</h3>
+                    <p>Unbreachable Language Barrier Elimination in Critical Network Incidents. Instantaneous, Secure Translation Engine for All Text & Voice Communications Across the Global Network Zenith. (Requires Advanced API Integration)</p>
+                </div>
+
+                <div class="feature placeholder-feature">
+                    <h3><i class="crime-icon">??</i> AI-Augmented Crime Prevention & Deterrence Net</h3>
+                    <p>Zenith Future Network Vision: Hyper-Integrated AI Drone Networks for Proactive, Autonomous Detection & Deterrence of Criminal Activity in Real-Time Nationwide. Unparalleled Network & Community Security Supremacy Nationwide. (Advanced Future Network Zenith Vision)</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="emergency-contacts">
+            <h2 >Immediate Emergency Contact Network</h2>
+
+            <div class="contacts-list">
+                <h3>Universal Emergency Services</h3>
+                <p><i class="contact-icon"><i class="fas fa-phone-alt"></i></i> <strong>All-in-One Helpline:</strong>  112 <button onclick="dial112()">Dial 112</button></p>
+            </div>
+
+             <div class="contacts-list">
+                <h3>?? Police & Law Enforcement</h3>
+                <p><i class="contact-icon"><i class="fas fa-phone-alt"></i></i> <strong>Police Helpline:</strong> 100 <button onclick="callNumber('100')">Dial 100</button></p>
+                <p><i class="contact-icon"><i class="fas fa-phone-alt"></i></i> <strong>Women Helpline (UP):</strong> 1090 <button onclick="callNumber('1090')">Dial 1090</button></p>
+                <p><i class="contact-icon"><i class="fas fa-phone-alt"></i></i> <strong>Women Helpline (National):</strong> 181 <button onclick="callNumber('181')">Dial 181</button></p>
+                <p><i class="contact-icon"><i class="fas fa-phone-alt"></i></i> <strong>Women & Child Protection:</strong> 1091 <button onclick="callNumber('1091')">Dial 1091</button></p>
+                <p><i class="contact-icon"><i class="fas fa-phone-alt"></i></i> <strong>Cyber Crime Reporting:</strong> 1930 <button onclick="callNumber('1930')">Dial 1930</button></p>
+            </div>
+
+             <div class="contacts-list">
+                <h3>?? Medical & Health Emergencies</h3>
+                <p><i class="contact-icon"><i class="fas fa-phone-alt"></i></i> <strong>Ambulance:</strong> 102 <button onclick="callNumber('102')">Dial 102</button></p>
+                <p><i class="contact-icon"><i class="fas fa-phone-alt"></i></i> <strong>Disaster Management:</strong> 108 <button onclick="callNumber('108')">Dial 108</button></p>
+                <p><i class="contact-icon"><i class="fas fa-phone-alt"></i></i> <strong>Child Helpline:</strong> 1098 <button onclick="callNumber('1098')">Dial 1098</button></p>
+                <p><i class="contact-icon"><i class="fas fa-phone-alt"></i></i> <strong>AIDS Helpline:</strong> 1097 <button onclick="callNumber('1097')">Dial 1097</button></p>
+                <p><i class="contact-icon"><i class="fas fa-phone-alt"></i></i> <strong>Anti-Poison (New Delhi):</strong> 1066 <button onclick="callNumber('1066')">Dial 1066</button></p>
+                <p><i class="contact-icon"><i class="fas fa-phone-alt"></i></i> <strong>COVID-19 Helpline:</strong> 011-23978046 <button onclick="callNumber('011-23978046')">Dial 011-23978046</button></p>
+            </div>
+
+             <div class="contacts-list">
+                <h3>?? Fire Services</h3>
+                <p><i class="contact-icon"><i class="fas fa-phone-alt"></i></i> <strong>Fire Services:</strong> 101 <button onclick="openFireServiceLink()">Dial 101</button></p>
+            </div>
+
+             <div class="contacts-list">
+                <h3>?? Senior Citizens Assistance</h3>
+                <p><i class="contact-icon"><i class="fas fa-phone-alt"></i></i> <strong>Senior Citizen Helpline:</strong> 14567 <button onclick="callNumber('14567')">Dial 14567</button></p>
+            </div>
+
+             <div class="contacts-list">
+                <h3>??? Road & Rail Network Emergencies</h3>
+                <p><i class="contact-icon"><i class="fas fa-phone-alt"></i></i> <strong>Road Accident Emergency:</strong> 1073 <button onclick="callNumber('1073')">Dial 1073</button></p>
+                <p><i class="contact-icon"><i class="fas fa-phone-alt"></i></i> <strong>Railway Accident Emergency:</strong> 1072 <button onclick="callNumber('1072')">Dial 1072</button></p>
+                <p><i class="contact-icon"><i class="fas fa-phone-alt"></i></i> <strong>Road Accident (National Highways):</strong> 1033 <button onclick="callNumber('1033')">Dial 1033</button></p>
+                <p><i class="contact-icon"><i class="fas fa-phone-alt"></i></i> <strong>Railway Enquiry:</strong> 139 <button onclick="callNumber('139')">Dial 139</button></p>
+            </div>
+
+             <div class="contacts-list">
+                <h3>?? Utilities & Essential Services</h3>
+                <p><i class="contact-icon"><i class="fas fa-phone-alt"></i></i> <strong>LPG Leak Helpline:</strong> 1906 <button onclick="callNumber('1906')">Dial 1906</button></p>
+                <p><i class="contact-icon"><i class="fas fa-phone-alt"></i></i> <strong>Electricity Complaint:</strong> 1912 <button onclick="callNumber('1912')">Dial 1912</button></p>
+                <p><i class="contact-icon"><i class="fas fa-phone-alt"></i></i> <strong>Water Supply:</strong> 155313 <button onclick="callNumber('155313')">Dial 155313</button></p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 BharatRakshak. All Rights Reserved.  |  <a href="#" onclick="showSignupPopup()">Secure Access Portal</a></p>
+    </footer>
+
+    <div id="subscription-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-button" onclick="closeSubscriptionPopup()">&times;</span>
+            <h2>Access Zenith AI Network</h2>
+            <div class="pricing-plans">
+                <div class="plan">
+                    <h3>Standard Access</h3>
+                    <p>?99-299/month</p>
+                    <ul>
+                        <li>?? AI Command Assistant (Text + Voice)</li>
+                        <li>?? Instant Secure Messaging</li>
+                        <li>?? Basic Location Intelligence</li>
+                        <li>?? AI Threat Prediction Protocols</li>
+                    </ul>
+                    <button class="action-button">Select Plan</button>
+                </div>
+                <div class="plan premium">
+                    <h3>Premium Access</h3>
+                    <p>?499-999/month</p>
+                    <ul>
+                        <li>?? Full AI Command Interface (Voice & Video)</li>
+                        <li>?? Live Emergency Tracking & e-FIR Network</li>
+                        <li>?? AI Security Authentication Matrix</li>
+                        <li>?? Military-Grade Data Security Protocols</li>
+                        <li>?? Early Disaster Warnings & Drone Assist Net</li>
+                    </ul>
+                    <button class="action-button">Choose Premium</button>
+                </div>
+                <div class="plan lifetime">
+                    <h3>Lifetime Access</h3>
+                    <p>?4,999-9,999 one-time</p>
+                    <ul>
+                        <li>?? Lifetime Access to All Premium Capabilities</li>
+                        <li>?? Exclusive AI Feature Upgrades & Enhancements</li>
+                        <li>?? Priority Access to Emergency Response Network</li>
+                    </ul>
+                    <button class="action-button">Get Lifetime Access</button>
+                </div>
+            </div>
+            <div class="free-access">
+                <input type="password" id="free-password" placeholder="Enter Network Access Code">
+                <button onclick="checkFreePassword()">Redeem Code</button>
+                <p id="password-message" style="color: gold; display: none;">Network Access Granted! Zenith AI Network Activated!</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="signup-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-button" onclick="closeSignupPopup()">&times;</span>
+            <h2>Secure Access Portal</h2>
+            <input type="email" placeholder="Enter Secure Network Email">
+            <input type="password" placeholder="Enter Secure Network Password">
+            <button class="action-button" onclick="loginSignupSuccess()">Secure Network Access</button>
+            <p id="signup-message" style="color: limegreen; display: none;">Network Verification Successful! BHARATRAKSHAK Securely Verified Your Identity! <br> <span style="font-size: 0.9em;">Rate Your Secure Network Experience:</span>
+                <div id="rating-area">
+                    <span class="star" onclick="rate(1)">&#9733;</span><span class="star" onclick="rate(2)">&#9733;</span><span class="star" onclick="rate(3)">&#9733;</span><span class="star" onclick="rate(4)">&#9733;</span><span class="star" onclick="rate(5)">&#9733;</span>
+                </div>
+                <div id="balloons" style="position: relative; height: 100px; overflow: hidden;"></div>
+
+            </p>
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        /* === JavaScript Functionality (Enhanced Interactivity - Geolocation, POIs & Aesthetics) === */
+        let aiRobotActive = false; // AI Robot activation state
+        let map; // Declare map variable outside the function scope
+
+        function triggerSOS() {
+            alert("Emergency SOS Activated - Zenith Network Protocols Engaged! (Simulated - Real functionality requires backend and national emergency services network integration)");
+        }
+
+        function reportFIR() {
+            window.open('https://uppolice.gov.in/?utm_source=chatgpt.com', '_blank');
+        }
+
+        function faceHelp() {
+            alert("Zenith Face Distress AI Activated - Accessing Advanced Facial Recognition and Distress Analysis AI (Placeholder - Real-time AI APIs and user media access permissions required)");
+        }
+
+        function callService(serviceType) {
+            alert(`${serviceType.toUpperCase()} Service Request Routed Through Zenith Secure Network (Placeholder - Real call functionality requires secure device integration and national emergency call network API)`);
+        }
+
+        function openMedicalLinks() {
+            window.open('https://www.lucknowhealthcity.com/24-7-services.php?utm_source=chatgpt', '_blank');
+            window.open('https://www.goaid.in/uttar-pradesh/?utm_source=chatgpt.com', '_blank');
+            window.open('https://www.apollohospitals.com/lucknow/centres-of-excellence/icu.html?utm_source=chatgpt.com', '_blank');
+        }
+
+        function callPoliceLink() {
+            window.open('https://uppolice.gov.in/en.aspx', '_blank');
+        }
+
+        function openFireServiceLink() {
+            window.open('https://upfireservice.gov.in/upfire/', '_blank'); // Fire button now opens this link
+        }
+
+
+        function sendChatMessage() {
+            const messageInput = document.getElementById('chat-message-input');
+            const chatLog = document.getElementById('chat-log');
+            const messageText = messageInput.value;
+
+            if (messageText.trim() !== "") {
+                // User message
+                let userMessageDiv = document.createElement('div');
+                userMessageDiv.classList.add('chat-message');
+                userMessageDiv.classList.add('user-message');
+                userMessageDiv.textContent = messageText;
+                chatLog.appendChild(userMessageDiv);
+
+                // Fixed Shaurya AI response - as requested + voice instruction message
+                setTimeout(() => {
+                    let aiResponseDiv = document.createElement('div');
+                    aiResponseDiv.classList.add('chat-message');
+                    aiResponseDiv.classList.add('ai-message');
+                    aiResponseDiv.innerHTML = `<b>Shaurya AI:</b><br>Call Emergency Services (Police, Ambulance, Fire) – Dial 112 (India) or your country's emergency number.<br>Move to a Safe Place – Avoid danger, go to a crowded or well-lit area.<br>Alert Someone – Call or message a trusted friend, family member, or authority.<br>Make Noise & Get Attention – Shout, use an alarm, or signal for help.<br><b style="color:#90F8FF;">STAY CALM & ACT FAST!</b> (Zenith Secure Network Guidance)<br><br><b style="color:#FFD700;">For immediate voice assistance, please dial 112 (India) or your local emergency helpline. Ensure you are in a safe location and notify a trusted contact. Utilize your phone’s SOS feature, enable location sharing, and seek assistance from the nearest authorities. Stay composed, act swiftly, and prioritize your safety.</b>`; // Added voice instruction message in gold color
+                    chatLog.appendChild(aiResponseDiv);
+                    chatLog.scrollTop = chatLog.scrollHeight;
+                }, 1400);
+
+                messageInput.value = "";
+                chatLog.scrollTop = chatLog.scrollHeight;
+            }
+        }
+
+        function startVoiceChat() {
+            alert("Voice Command Interface Activated (Placeholder - Secure voice recognition and AI command response features require Web Speech API and advanced secure backend network integration)");
+        }
+
+
+        let subscriptionPopup = document.getElementById('subscription-popup');
+        function openSubscriptionPopup() {
+            subscriptionPopup.style.display = 'flex';
+        }
+        function closeSubscriptionPopup() {
+            subscriptionPopup.style.display = 'none';
+        }
+
+        function checkFreePassword() {
+            const passwordInput = document.getElementById('free-password');
+            const passwordMessage = document.getElementById('password-message');
+            const aiRobotIcon = document.getElementById('ai-robot-icon');
+            if (passwordInput.value === 'mittal23') {
+                passwordMessage.style.display = 'block';
+                setTimeout(() => { passwordMessage.style.display = 'none'; }, 3000);
+                alert("Zenith AI Network Access Code Authenticated! AI Robot Activated! (Simulated for Secure Network Access and Verification Protocols)");
+                closeSubscriptionPopup();
+                aiRobotActive = true; // Set AI Robot to active
+                aiRobotIcon.classList.add('active'); // Show AI Robot icon
+            } else {
+                alert("Invalid Network Access Code. Secure Access Verification Failed.");
+            }
+        }
+
+        let signupPopup = document.getElementById('signup-popup');
+        function showSignupPopup() {
+            signupPopup.style.display = 'flex';
+        }
+        function closeSignupPopup() {
+            signupPopup.style.display = 'none';
+            document.getElementById('signup-message').style.display = 'none';
+            resetRating();
+            clearBalloons();
+        }
+
+
+        function loginSignupSuccess() {
+            const signupMessage = document.getElementById('signup-message');
+            signupMessage.style.display = 'block';
+            showBalloons();
+        }
+
+        function showBalloons() {
+            const balloonsContainer = document.getElementById('balloons');
+            balloonsContainer.innerHTML = '';
+            balloonsContainer.style.display = 'none'; //ensure hidden
+
+        }
+
+        function clearBalloons() {
+            const balloonsContainer = document.getElementById('balloons');
+            balloonsContainer.innerHTML = '';
+            balloonsContainer.style.display = 'none'; //ensure hidden
+        }
+
+        let ratingValue = 0;
+        function rate(stars) {
+            ratingValue = stars;
+            updateRatingDisplay(stars);
+        }
+
+        function updateRatingDisplay(stars) {
+            const starElements = document.querySelectorAll('#rating-area .star');
+            starElements.forEach((star, index) => {
+                if (index < stars) {
+                    star.classList.add('active');
+                } else {
+                    star.classList.remove('active');
+                }
+            });
+            alert(`Zenith Network Experience Rating Authenticated: ${stars} Stars. Secure Feedback Protocols Engaged.`);
+        }
+
+        function resetRating() {
+            ratingValue = 0;
+            updateRatingDisplay(0);
+        }
+
+        function callNumber(number) {
+            alert(`Initiating Secure Call to Zenith Emergency Response Network: ${number} (Simulated - Real call functionality requires Secure Device-Network Integration)`);
+        }
+
+        function dial112() {
+            window.location.href = 'tel:112';
+        }
+
+        // --- Map Integration (Leaflet) with Geolocation & POIs ---
+        map = L.map('map-area').setView([28.6139, 77.2090], 12); // Default view to Delhi
+
+        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { // Using ArcGIS Satellite Imagery
+            attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+        }).addTo(map);
+
+        var mapOverlayText = document.querySelector('.map-overlay-text');
+        let policeStationsLayer = L.layerGroup().addTo(map); // Layer group for police stations
+        let hospitalsLayer = L.layerGroup().addTo(map); // Layer group for hospitals
+
+
+        function onLocationFound(e) {
+            var radius = e.accuracy / 2;
+            L.marker(e.latlng).addTo(map)
+                .bindPopup("Your location within " + radius + " meters").openPopup();
+
+            L.circle(e.latlng, radius).addTo(map);
+            map.setView(e.latlng, 15); // Zoom in to user location
+            mapOverlayText.style.display = 'none'; // Hide "Loading Map..." once location is found
+
+            // --- POI Search (Police Stations & Hospitals - Placeholder Data) ---
+            const userLat = e.latlng.lat;
+            const userLng = e.latlng.lng;
+
+             // Placeholder POI data - Replace with real POI API calls for production
+            const policeStations = [
+                { name: "Nearest Police Station 1", lat: userLat + 0.01, lng: userLng + 0.01, phone: "100" },
+                { name: "Police Thana Sector 4", lat: userLat - 0.02, lng: userLng - 0.02, phone: "100" },
+                { name: "Cyber Crime Cell", lat: userLat + 0.03, lng: userLng - 0.015, phone: "1930" }
+            ];
+
+            const hospitals = [
+                { name: "City Emergency Hospital", lat: userLat - 0.01, lng: userLng + 0.02, phone: "102" },
+                { name: "Lifeline Medical Center", lat: userLat + 0.025, lng: userLng + 0.005, phone: "102" },
+                { name: "Apex Trauma Care", lat: userLat - 0.03, lng: userLng + 0.01, phone: "108" }
+            ];
+
+            // Clear existing layers
+            policeStationsLayer.clearLayers();
+            hospitalsLayer.clearLayers();
+
+            // Add Police Stations to map
+            policeStations.forEach(station => {
+                L.marker([station.lat, station.lng], {icon: L.icon({
+                    iconUrl: 'police-icon.png', // Replace with your police icon image path
+                    iconSize: [32, 32],
+                    iconAnchor: [16, 32],
+                    popupAnchor: [0, -32]
+                })}).addTo(policeStationsLayer)
+                    .bindPopup(`<b>Police Station:</b> ${station.name}<br><b>Helpline:</b> <a href="tel:${station.phone}">${station.phone}</a>`);
+            });
+
+            // Add Hospitals to map
+            hospitals.forEach(hospital => {
+                L.marker([hospital.lat, hospital.lng], {icon: L.icon({
+                    iconUrl: 'hospital-icon.png', // Replace with your hospital icon image path
+                    iconSize: [32, 32],
+                    iconAnchor: [16, 32],
+                    popupAnchor: [0, -32]
+                })}).addTo(hospitalsLayer)
+                    .bindPopup(`<b>Hospital:</b> ${hospital.name}<br><b>Emergency:</b> <a href="tel:${hospital.phone}">${hospital.phone}</a>`);
+            });
+
+
+        }
+
+        function onLocationError(e) {
+            mapOverlayText.textContent = 'Location Access Denied or Unavailable. Displaying Default Map & General Emergency Resources.'; // Updated error message
+            mapOverlayText.style.display = 'block'; // Show error message
+             // Clear POI layers on location error as POIs are location-dependent
+            policeStationsLayer.clearLayers();
+            hospitalsLayer.clearLayers();
+        }
+
+
+        map.on('locationfound', onLocationFound);
+        map.on('locationerror', onLocationError);
+
+        map.locate({setView: false, maxZoom: 16, timeout: 10000}); // Locate user, but initially don't setView, timeout after 10s
+
+         // Style for the map iframe overlay text (same as CSS)
+        if (mapOverlayText) {
+            mapOverlayText.style.color = '#C5CDD3';
+            mapOverlayText.style.fontStyle = 'italic';
+            mapOverlayText.style.textAlign = 'center';
+            mapOverlayText.style.position = 'absolute';
+            mapOverlayText.style.top = '50%';
+            mapOverlayText.style.left = '50%';
+            mapOverlayText.style.transform = 'translate(-50%, -50%)';
+            mapOverlayText.style.zIndex = '1000'; // ensure it's on top of the map
+            mapOverlayText.style.pointerEvents = 'none'; // make it non-interactive
+            mapOverlayText.style.display = 'block'; // Initially show "Loading Map..."
+        }
+
+
+    </script>
+
+
+</body>
+</html>
